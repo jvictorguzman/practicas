@@ -1,0 +1,20 @@
+name: Ejecucion de comandos Linux
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  comandos-basicos:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Step 1 - Listado de directorios
+        run: ls -la
+        
+      - name: Step 2 - Fecha y hora del sistema
+        run: date
+        
+      - name: Step 3 - Espacio en discos
+        run: df -h
